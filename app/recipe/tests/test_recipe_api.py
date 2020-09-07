@@ -65,7 +65,9 @@ class PrivateRecipeApiTests(TestCase):
 
         res = self.client.get(RECIPES_URL)
 
-        recipes = Recipe.objects.all()#.order_by('-id') cuases TC to fail??
+        # recipes = Recipe.objects.all().order_by(-'id)')
+        # .order_by('-id') cuases TC to fail??, removed...
+        recipes = Recipe.objects.all()
         serializer = RecipeSerializer(recipes, many=True)
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data, serializer.data)
