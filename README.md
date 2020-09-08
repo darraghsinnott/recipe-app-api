@@ -26,10 +26,12 @@ Starting/stopping the application
 
 startup:
 cd recipe_app_api
+
 docker-compose up -d
 
 shutdown:
 cd recipe_app_api
+
 docker-compose down
 
 
