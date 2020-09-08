@@ -23,13 +23,12 @@ docker-composedocker-compose run --rm app sh -c "python manage.py createsuperuse
 {enter an email and password of your chosing (e.g. 'admin@django.com' 'test1234')"
 
 Starting/stopping the application
-startup
 
+startup:
 cd recipe_app_api
 docker-compose up -d
 
-shutdown
-
+shutdown:
 cd recipe_app_api
 docker-compose down
 
