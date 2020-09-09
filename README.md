@@ -21,7 +21,9 @@ git clone https://github.com/darraghsinnott/recipe-app-api.git
 
 cd recipe_app_api
 
-docker-compose run --rm app sh -c "python manage.py createsuperuser"
+docker-compose run --rm app sh-c "python manage.py migrate" 
+
+docker-compose run  --rm app sh -c "python manage.py createsuperuser"
 
 {enter an email and password of your chosing (e.g. 'admin@django.com' 'test1234')"
 
